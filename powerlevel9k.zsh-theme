@@ -619,11 +619,11 @@ prompt_context() {
   local current_state="DEFAULT"
   typeset -AH context_states
   context_states=(
-    "ROOT"        "yellow"
-    "SUDO"        "yellow"
-    "DEFAULT"     "yellow"
-    "REMOTE"      "yellow"
-    "REMOTE_SUDO" "yellow"
+    "ROOT"        "green3a"
+    "SUDO"        "cyan3"
+    "DEFAULT"     "deeppink3"
+    "REMOTE"      "darkolivegreen1"
+    "REMOTE_SUDO" "darkcyan"
   )
 
   local content=""
@@ -1265,7 +1265,7 @@ prompt_ram() {
     fi
   fi
 
-  "$1_prompt_segment" "$0" "$2" "yellow" "$DEFAULT_COLOR" "$(printSizeHumanReadable "$ramfree" $base)" 'RAM_ICON'
+  "$1_prompt_segment" "$0" "$2" "grey66" "$DEFAULT_COLOR" "$(printSizeHumanReadable "$ramfree" $base)" 'RAM_ICON'
 }
 
 ################################################################
